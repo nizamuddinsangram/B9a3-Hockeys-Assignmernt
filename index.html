@@ -1,14 +1,923 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    
-</body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="mx-auto w-10/12">
+    <!--navbar   -->
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div
+            tabindex="0"
+            role="button"
+            class="btn btn-ghost md:hidden lg:hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 md:hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li><a>Home </a></li>
+            <li><a>About</a></li>
+            <li><a>Pages</a></li>
+            <li><a>Blog</a></li>
+          </ul>
+        </div>
+        <a class="text-2xl font-extrabold">Hockey’s</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 text-xl font-light">
+          <li><a class="hover:text-red-300">Home </a></li>
+          <li><a class="hover:text-red-300">About</a></li>
+          <li><a class="hover:text-red-300">Pages</a></li>
+          <li><a class="hover:text-red-300">Blog</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a class="btn bg-red-500 text-white">Get Ticket</a>
+      </div>
+    </div>
+    <!--slider  max-w-screen-md-->
+    <div class="grid lg:relative">
+      <div
+        class="carousel w-full h-[300px] lg:h-[600px] rounded-lg mb-4 lg:mb-24"
+      >
+        <div id="slide1" class="carousel-item relative w-full">
+          <img
+            src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
+            class="w-full"
+          />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img
+            src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
+            class="w-full"
+          />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <img
+            src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
+            class="w-full"
+          />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide4" class="carousel-item relative w-full">
+          <img
+            src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
+            class="w-full"
+          />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div
+        class="lg:absolute right-4 bottom-32 bg-slate-900 text-white w-full lg:w-2/5 p-4 h-full lg:h-40 rounded-md"
+      >
+        <p class="text-2xl font-bold my-2 py-2">
+          Meet all the heroes from the field
+        </p>
+        <p class="font-bold text-lg text-base text-gray-400 px-2">
+          One of the best parts of my job is getting to meet amazing people who
+          are doing things. Some of them are well known but most.
+        </p>
+      </div>
+    </div>
+    <!--  -->
+    <hr class="my-6 border-t-2 border-gray-300" />
+
+    <!--  -->
+    <!-- <div class="container w-full mx-auto flex flex-wrap justify-center py-8">
+      <div class="w-full md:w-1/2 lg:w-1/2 p-4">
+        <div
+          class="bg-cover bg-center rounded-lg h-80"
+          style="background-image: url('images/2.png')"
+        >
+          <div
+            class="h-full flex flex-col justify-between p-6 bg-black bg-opacity-50 rounded-lg"
+          >
+            <div>
+              <h2 class="text-2xl font-bold text-white">Program 1</h2>
+              <p class="text-white mt-2">Description of Program 1 goes here.</p>
+            </div>
+            <a
+              href="#"
+              class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full text-center"
+              >Register Now</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full md:w-1/2 lg:w-1/2 p-4">
+        <div
+          class="bg-cover bg-center rounded-lg h-80"
+          style="background-image: url('images/3.png')"
+        >
+          <div
+            class="h-full flex flex-col justify-between p-6 bg-black bg-opacity-50 rounded-lg"
+          >
+            <div>
+              <h2 class="text-2xl font-bold text-white">Program 2</h2>
+              <p class="text-white mt-2">Description of Program 2 goes here.</p>
+            </div>
+            <a
+              href="#"
+              class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full text-center"
+              >Register Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!--  -->
+    <section class="container mx-auto py-12">
+      <div class="text-center">
+        <h2 class="text-5xl font-black mb-8">Professional Hockey Club</h2>
+        <p class="mt-2 text-xl font-normal leading-normal">
+          The Allen Americans Professional Hockey Club is a member of the ECHL,
+          the world's top Double-A hockey<br />
+          league, and is the affiliate of the National Hockey.
+        </p>
+      </div>
+      <hr class="my-8 border-t-2 border-gray-300" />
+      <div
+        class="grid grid-cols-1 justify-center items-center my-20 md:grid lg:flex justify-between"
+      >
+        <div class="w-full lg:w-1/4 text-center px-8">
+          <div
+            class="radial-progress text-red-500 text-3xl font-black"
+            style="--value: 87; --size: 8rem; --thickness: 14px"
+            role="progressbar"
+          >
+            87%
+          </div>
+          <h3 class="text-xl font-black my-4">Prayer Facility</h3>
+          <p class="text-gray-600 text-lg font-medium">
+            He University has an inclusive multi-belief Chaplaincy providing.
+          </p>
+        </div>
+        <div class="w-full lg:w-1/4 text-center px-8">
+          <div
+            class="radial-progress text-lime-600 text-3xl font-black"
+            style="--value: 95; --size: 8rem; --thickness: 14px"
+            role="progressbar"
+          >
+            95%
+          </div>
+          <h3 class="text-xl font-black my-4">Experienced Coach</h3>
+          <p class="text-gray-600 text-lg font-medium">
+            Get Your Free e-book now and Transform Your Life.
+          </p>
+        </div>
+        <div class="w-full lg:w-1/4 text-center px-8">
+          <div
+            class="radial-progress text-yellow-300 text-3xl font-black"
+            style="--value: 90; --size: 8rem; --thickness: 14px"
+            role="progressbar"
+          >
+            90%
+          </div>
+          <h3 class="text-xl font-black my-4">Senior Player</h3>
+          <p class="text-gray-600 text-lg font-medium">
+            Senior Player means a player who has played International,
+          </p>
+        </div>
+        <div class="w-full lg:w-1/4 text-center px-8">
+          <div
+            class="radial-progress text-blue-700 text-3xl font-black"
+            style="--value: 80; --size: 8rem; --thickness: 14px"
+            role="progressbar"
+          >
+            80%
+          </div>
+          <h3 class="text-xl font-black my-4">Training Ground</h3>
+          <p class="text-gray-600 text-lg font-medium">
+            sport an area where people prepare for sporting competitions .
+          </p>
+        </div>
+      </div>
+      <hr class="my-6 border-t-2 border-gray-300" />
+    </section>
+
+    <!--  -->
+
+    <div class="">
+      <h2 class="text-4xl text-center font-black mb-4">Program Sections</h2>
+      <p class="text-gray-600 text-xl font-medium text-center mb-10">
+        The program section is a conditionally defined psect associated with
+        <br />conditionally defined symbol.
+      </p>
+      <hr class="my-6 border-t-2 border-gray-300" />
+
+      <div class="container w-full mx-auto flex flex-wrap justify-center py-8">
+        <div class="w-full md:w-1/2 lg:w-1/2 p-4 relative">
+          <div
+            class="bg-cover bg-center rounded-lg h-[280px] lg:h-[430px]"
+            style="background-image: url('images/2.png')"
+          >
+            <div
+              class="h-full flex flex-col justify-between p-6 bg-black bg-opacity-50 rounded-lg"
+            >
+              <div class="absolute bottom-20">
+                <h2 class="text-3xl font-bold text-white">Junior Program</h2>
+                <p
+                  class="text-white my-4 mb-8 pr-16 leading-relaxed tracking-widest"
+                >
+                  The Junior Professional Associate (JPA) program is a unique
+                  opportunity to gain entry-level professional experience and
+                  first-hand exposure to the challenges.
+                </p>
+                <a
+                  href="#"
+                  class="bg-blue-500 rounded-md p-2 w-32 hover:bg-blue-600 text-white font-bold bg-red-500 text-center"
+                  >Register Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="w-full md:w-1/2 lg:w-1/2 p-4 relative">
+          <div
+            class="bg-cover bg-center rounded-lg h-[280px] lg:h-[430px]"
+            style="background-image: url('images/3.png')"
+          >
+            <div
+              class="h-full flex flex-col justify-between p-6 bg-black bg-opacity-50 rounded-lg"
+            >
+              <div class="absolute bottom-20">
+                <h2 class="text-3xl font-bold text-white">Teenager Program</h2>
+                <p
+                  class="text-white my-4 mb-8 pr-16 leading-relaxed tracking-widest"
+                >
+                  Fun programs for babies, toddlers, and all grade-school
+                  levels. We Are a Safe, Joyous, Inclusive, Loving, and Happy
+                  Space. See Services. View Our Story. Browse Resources.
+                </p>
+                <a
+                  href="#"
+                  class="bg-blue-500 rounded-md p-2 w-32 hover:bg-blue-600 text-white font-bold bg-red-500 text-center"
+                  >Register Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-full p-4 relative">
+          <div
+            class="bg-cover bg-center rounded-lg h-[280px] lg:h-[430px]"
+            style="background-image: url('images/4.png')"
+          >
+            <div
+              class="h-full flex flex-col justify-between p-6 bg-black bg-opacity-50 rounded-lg"
+            >
+              <div class="absolute bottom-20 lg:w-2/5">
+                <h2 class="text-3xl font-bold text-white">
+                  Professional Program
+                </h2>
+                <p
+                  class="text-white my-4 mb-8 pr-16 leading-relaxed tracking-wider"
+                >
+                  Professional program means a program that provides
+                  information, such as trends in an industry or discipline,
+                  which would benefit the administration or operation of the
+                  CNYRTA and would enable an Employee to perform his or her
+                  duties more effectively.
+                </p>
+                <a
+                  href="#"
+                  class="bg-blue-500 rounded-md p-2 w-32 hover:bg-blue-600 text-white font-bold bg-red-500 text-center"
+                  >Register Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-t-2 border-gray-300" />
+    </div>
+    <!-- our mew section -->
+    <div class="container text-center mx-auto py-8">
+      <h2 class="text-4xl font-black mb-4">Our New Products</h2>
+      <p class="text-gray-600 mb-4 text-xl font-semibold">
+        You’ve poured your blood, sweat, and tears into a new product. You<br />
+        release the product into the world.
+      </p>
+      <hr class="my-6 border-t-2 border-gray-300" />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <!-- Card 1 -->
+        <div
+          class="border border-slate-400 bg-slate-100 rounded-lg overflow-hidden p-4 h-full lg:h-52"
+        >
+          <div class="grid lg:flex">
+            <img
+              src="images/8.png"
+              alt="Product Image"
+              class="w-2/6 lg:w-2/6 w-full h-52 lg:h-40"
+            />
+            <div class="p-4 lg:w-4/6">
+              <div class="flex items-center mb-2">
+                <div>
+                  <span class="text-yellow-400">★</span>
+                  <span class="text-gray-600 ml-02">10.0</span>
+                </div>
+                <div class="mx-8">
+                  <span><i class="fa-regular fa-eye"></i></span>
+                  <span class="text-gray-600 ml-02">20</span>
+                </div>
+                <div>
+                  <span><i class="fa-regular fa-heart"></i></span>
+                  <span class="text-gray-600 ml-02">200</span>
+                </div>
+              </div>
+              <h3 class="text-2xl font-black text-start mb-2">
+                World Cup Flags Football
+              </h3>
+              <p class="mb-2 text-start text-lg font-medium">
+                Get ready for the Men's World Cup with these lovely country name
+                paper.
+              </p>
+              <!--  -->
+              <div class="grid grid-cols-1 text-start lg:flex">
+                <p class="text-gray-800 text-xl text-red-500 font-bold mr-2">
+                  Price-$29.99
+                </p>
+                <p class="text-gray-600">
+                  <i class="fa-solid mx-2 fa-truck"></i>Delivery Fee: $5.00
+                </p>
+              </div>
+              <!--  -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="border border-slate-400 bg-slate-100 rounded-lg overflow-hidden p-4 h-full lg:h-52"
+        >
+          <div class="grid lg:flex">
+            <img
+              src="images/5.png"
+              alt="Product Image"
+              class="w-2/6 lg:w-2/6 w-full h-52 lg:h-40"
+            />
+            <div class="p-4 lg:w-4/6">
+              <div class="flex items-center mb-2">
+                <div>
+                  <span class="text-yellow-400">★</span>
+                  <span class="text-gray-600 ml-02">10.0</span>
+                </div>
+                <div class="mx-8">
+                  <span><i class="fa-regular fa-eye"></i></span>
+                  <span class="text-gray-600 ml-02">20</span>
+                </div>
+                <div>
+                  <span><i class="fa-regular fa-heart"></i></span>
+                  <span class="text-gray-600 ml-02">200</span>
+                </div>
+              </div>
+              <h3 class="text-2xl font-black text-start mb-2">
+                World Cup jercy for Football
+              </h3>
+              <p class="mb-2 text-start text-lg font-medium">
+                Manufacturer of Printed Cricket Jersey T Shirt, Jercy offered by
+                Sports Jersey Wear,
+              </p>
+              <!--  -->
+              <div class="grid grid-cols-1 text-start lg:flex">
+                <p class="text-gray-800 text-xl text-red-500 font-bold mr-2">
+                  Price-$29.99
+                </p>
+                <p class="text-gray-600">
+                  <i class="fa-solid mx-2 fa-truck"></i>Delivery Fee: $5.00
+                </p>
+              </div>
+              <!--  -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="border border-slate-400 bg-slate-100 rounded-lg overflow-hidden p-4 h-full lg:h-52"
+        >
+          <div class="grid lg:flex">
+            <img
+              src="images/6.png"
+              alt="Product Image"
+              class="w-2/6 lg:w-2/6 w-full h-52 lg:h-40"
+            />
+            <div class="p-4 lg:w-4/6">
+              <div class="flex items-center mb-2">
+                <div>
+                  <span class="text-yellow-400">★</span>
+                  <span class="text-gray-600 ml-02">10.0</span>
+                </div>
+                <div class="mx-8">
+                  <span><i class="fa-regular fa-eye"></i></span>
+                  <span class="text-gray-600 ml-02">20</span>
+                </div>
+                <div>
+                  <span><i class="fa-regular fa-heart"></i></span>
+                  <span class="text-gray-600 ml-02">200</span>
+                </div>
+              </div>
+              <h3 class="text-2xl font-black text-start mb-2">
+                World Cup Football
+              </h3>
+              <p class="mb-2 text-start text-lg font-medium">
+                Get ready for the Men's World Cup with these lovely country name
+                paper.
+              </p>
+              <!--  -->
+              <div class="grid grid-cols-1 text-start lg:flex">
+                <p class="text-gray-800 text-xl text-red-500 font-bold mr-2">
+                  Price-$29.99
+                </p>
+                <p class="text-gray-600">
+                  <i class="fa-solid mx-2 fa-truck"></i>Delivery Fee: $5.00
+                </p>
+              </div>
+              <!--  -->
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div
+          class="border border-slate-400 bg-slate-100 rounded-lg overflow-hidden p-4 h-full lg:h-52"
+        >
+          <div class="grid lg:flex">
+            <img
+              src="images/7.png"
+              alt="Product Image"
+              class="w-2/6 lg:w-2/6 w-full h-52 lg:h-40"
+            />
+            <div class="p-4 lg:w-4/6">
+              <div class="flex items-center mb-2">
+                <div>
+                  <span class="text-yellow-400">★</span>
+                  <span class="text-gray-600 ml-02">10.0</span>
+                </div>
+                <div class="mx-8">
+                  <span><i class="fa-regular fa-eye"></i></span>
+                  <span class="text-gray-600 ml-02">20</span>
+                </div>
+                <div>
+                  <span><i class="fa-regular fa-heart"></i></span>
+                  <span class="text-gray-600 ml-02">200</span>
+                </div>
+              </div>
+              <h3 class="text-2xl font-black text-start mb-2">
+                Cap For Hockeys
+              </h3>
+              <p class="mb-2 text-start text-lg font-medium">
+                Browse our extensive selection of official NHL caps at Hatstore
+                Represent.
+              </p>
+              <!--  -->
+              <div class="grid grid-cols-1 text-start lg:flex">
+                <p class="text-gray-800 text-xl text-red-500 font-bold mr-2">
+                  Price-$29.99
+                </p>
+                <p class="text-gray-600">
+                  <i class="fa-solid mx-2 fa-truck"></i>Delivery Fee: $5.00
+                </p>
+              </div>
+              <!--  -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="border border-slate-400 bg-slate-100 rounded-lg overflow-hidden p-4 h-full lg:h-52"
+        >
+          <div class="grid lg:flex">
+            <img
+              src="images/9.png"
+              alt="Product Image"
+              class="w-2/6 lg:w-2/6 w-full h-52 lg:h-40"
+            />
+            <div class="p-4 lg:w-4/6">
+              <div class="flex items-center mb-2">
+                <div>
+                  <span class="text-yellow-400">★</span>
+                  <span class="text-gray-600 ml-02">10.0</span>
+                </div>
+                <div class="mx-8">
+                  <span><i class="fa-regular fa-eye"></i></span>
+                  <span class="text-gray-600 ml-02">20</span>
+                </div>
+                <div>
+                  <span><i class="fa-regular fa-heart"></i></span>
+                  <span class="text-gray-600 ml-02">200</span>
+                </div>
+              </div>
+              <h3 class="text-2xl font-black text-start mb-2">
+                World Cup Helmet
+              </h3>
+              <p class="mb-2 text-start text-lg font-medium">
+                At Cricketer shop, we have a of Cricket Helmets for Men and for
+                Boys.
+              </p>
+              <!--  -->
+              <div class="grid grid-cols-1 text-start lg:flex">
+                <p class="text-gray-800 text-xl text-red-500 font-bold mr-2">
+                  Price-$29.99
+                </p>
+                <p class="text-gray-600">
+                  <i class="fa-solid mx-2 fa-truck"></i>Delivery Fee: $5.00
+                </p>
+              </div>
+              <!--  -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="border border-slate-400 bg-slate-100 rounded-lg overflow-hidden p-4 h-full lg:h-52"
+        >
+          <div class="grid lg:flex">
+            <img
+              src="images/10.png"
+              alt="Product Image"
+              class="w-2/6 lg:w-2/6 w-full h-52 lg:h-40"
+            />
+            <div class="p-4 lg:w-4/6">
+              <div class="flex items-center mb-2">
+                <div>
+                  <span class="text-yellow-400">★</span>
+                  <span class="text-gray-600 ml-02">10.0</span>
+                </div>
+                <div class="mx-8">
+                  <span><i class="fa-regular fa-eye"></i></span>
+                  <span class="text-gray-600 ml-02">20</span>
+                </div>
+                <div>
+                  <span><i class="fa-regular fa-heart"></i></span>
+                  <span class="text-gray-600 ml-02">200</span>
+                </div>
+              </div>
+              <h3 class="text-2xl font-black text-start mb-2">
+                World Cup Football
+              </h3>
+              <p class="mb-2 text-start text-lg font-medium">
+                Get the latest live football scores, results & fixtures from
+                powered by Goal.com.
+              </p>
+              <!--  -->
+              <div class="grid grid-cols-1 text-start lg:flex">
+                <p class="text-gray-800 text-xl text-red-500 font-bold mr-2">
+                  Price-$29.99
+                </p>
+                <p class="text-gray-600">
+                  <i class="fa-solid mx-2 fa-truck"></i>Delivery Fee: $5.00
+                </p>
+              </div>
+              <!--  -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-t-2 border-gray-300" />
+    </div>
+    <!-- client question section -->
+    <div class="container mx-auto py-8">
+      <h2 class="text-4xl font-black text-center mb-8">Client Questions</h2>
+      <p class="text-gray-600 text-lg font-normal text-center mb-8">
+        A few weeks ago, I tapped my network for answers to the above, and
+        received<br />
+        dozens of thoughtful responses showcasing.
+      </p>
+      <hr class="my-6 border-t-2 border-gray-300" />
+
+      <div class="grid grid-cols-1 lg:flex">
+        <!-- Image Section (Left Side - 40%) -->
+        <div class="lg:w-2/5">
+          <img src="images/11.png" alt="Client Image" class="w-full h-auto" />
+        </div>
+
+        <!-- Question & Answer Section (Right Side - 60%) -->
+        <div class="lg:w-3/5 ml-4">
+          <!-- Question 1 -->
+          <div
+            tabindex="0"
+            class="collapse mb-4 collapse-plus border border-base-300 bg-base-200"
+          >
+            <div class="collapse-title text-xl font-black">Our Equipments</div>
+            <div class="collapse-content">
+              <p>
+                Discover a complete range of innovative fluid distribution
+                equipment designed to meet the needs of the electronics
+                industry, laboratories.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div
+            tabindex="0"
+            class="collapse mb-4 collapse-plus border border-base-300 bg-base-200"
+          >
+            <div class="collapse-title text-xl font-black">
+              Hockey Trainings
+            </div>
+            <div class="collapse-content">
+              <p>
+                At HockeyTraining.com we provide players with hockey training
+                articles, videos, and workout programs to help them improve
+                their hockey game.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 1 -->
+          <div
+            tabindex="0"
+            class="collapse mb-4 collapse-plus border border-base-300 bg-base-200"
+          >
+            <div class="collapse-title text-xl font-black">Private Lesson</div>
+            <div class="collapse-content">
+              <p>
+                An immigrant housemaid seduces a 15-year-old boy and later fakes
+                her own death as part of his chauffeur's blackmail plot.
+                Troubles arise when the two start .
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div
+            tabindex="0"
+            class="collapse mb-4 collapse-plus border border-base-300 bg-base-200"
+          >
+            <div class="collapse-title text-xl font-black">Ski Touring</div>
+            <div class="collapse-content">
+              <p>
+                Ski touring is skiing in the backcountry on unmarked or
+                unpatrolled areas. Touring is typically done off-piste and
+                outside of ski resorts, and may extend .
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 1 -->
+          <div
+            tabindex="0"
+            class="collapse mb-4 collapse-plus border border-base-300 bg-base-200"
+          >
+            <div class="collapse-title text-xl font-black">Bookings</div>
+            <div class="collapse-content">
+              <p>
+                Finding a place in short order has never been easier. Our app
+                allows you to search for properties nearby, fill in a few
+                details, and secure your reservation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div
+            tabindex="0"
+            class="collapse mb-4 collapse-plus border border-base-300 bg-base-200"
+          >
+            <div class="collapse-title text-xl font-black">Pricings</div>
+            <div class="collapse-content">
+              <p>
+                Pricing is the process whereby a business sets the price at
+                which it will sell its products and services, and may be part of
+                the business's marketing plan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-t-2 border-gray-300" />
+    </div>
+    <!--contract us   -->
+    <div class="container mx-auto py-8">
+      <h2 class="text-4xl font-black text-center mb-4">Get In Touch</h2>
+      <p class="text-gray-600 text-lg font-normal text-center mb-4">
+        Get in touch with something meaning, definition, what is get in touch<br />
+        with something: to realize.
+      </p>
+      <hr class="my-6 border-t-2 border-gray-300" />
+
+      <div class="lg:flex">
+        <!-- Left Side - 40% -->
+        <div class="lg:w-2/5 bg-white p-6">
+          <!-- Card 1 -->
+          <div class="mb-4 py-4 pl-8 bg-lime-50 h-52 rounded-md grid">
+            <img
+              src="images/Group 1171275317.png"
+              alt="Phone Icon"
+              class="w-8 h-8 inline-block mr-2"
+            />
+            <span class="font-semibold">Phone Number:</span>
+            <span class="text-xl font-black">123-456-7890</span>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="mb-4 py-4 grid pl-8 bg-amber-100 h-52 rounded-md">
+            <img
+              src="images/Group 1171275318.png"
+              alt="Email Icon"
+              class="w-8 h-8 inline-block mr-2"
+            />
+            <span class="font-semibold">Email:</span>
+            <span class="text-xl font-black"> example@example.com </span>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="grid py-4 pl-8 bg-blue-200 h-52 rounded-md">
+            <img
+              src="images/Group 1171275321.png"
+              alt="Location Icon"
+              class="w-8 h-8 inline-block mr-2"
+            />
+            <span class="font-semibold p-0">Address:</span>
+            <span class="text-xl font-black"> 123 Street, City, Country</span>
+          </div>
+        </div>
+
+        <!-- Right Side - 60% -->
+        <div class="lg:w-3/5 ml-4">
+          <form action="#" class="bg-gray-200 p-6">
+            <!--  -->
+            <div class="grid grid-cols-1 lg:grid lg:gap-4 lg:grid-cols-2">
+              <div class="mb-4">
+                <p class="font-black text-xl">Your Name</p>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  class="w-full p-2 border rounded-md"
+                />
+              </div>
+              <div class="mb-4">
+                <p class="font-black text-xl">Your Email</p>
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  class="p-2 w-full border rounded-md"
+                />
+              </div>
+            </div>
+            <!--  -->
+            <div class="grid gap-4 grid-cols-1 lg:grid-cols-2">
+              <div class="mb-4">
+                <p class="font-black text-xl">Subject</p>
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  class="w-full p-2 border rounded-md"
+                />
+              </div>
+              <div class="mb-4">
+                <p class="font-black text-xl">Phone Number</p>
+                <input
+                  type="text"
+                  placeholder="Phone Number"
+                  class="w-full p-2 border rounded-md"
+                />
+              </div>
+            </div>
+            <!--  -->
+            <div class="mb-4">
+              <p class="font-black text-xl">Message</p>
+              <textarea
+                placeholder="Your Message"
+                class="w-full h-[370px] p-2 border rounded-md"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="bg-blue-500 w-full bg-red-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="bg-gray-100 py-8 mb-4">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-black mb-4">Social Media</h2>
+        <div class="flex justify-center space-x-6">
+          <!-- Font Awesome Icons -->
+          <a
+            href="#"
+            class="text-black hover:text-gray-400 transition duration-300"
+          >
+            <i class="fab fa-facebook fa-3x"></i>
+          </a>
+          <a
+            href="#"
+            class="text-black hover:text-gray-400 transition duration-300"
+          >
+            <i class="fab fa-twitter fa-3x"></i>
+          </a>
+          <a
+            href="#"
+            class="text-black hover:text-gray-400 transition duration-300"
+          >
+            <i class="fa-brands fa-3x fa-youtube"></i>
+          </a>
+          <!-- Add more social icons as needed -->
+        </div>
+      </div>
+    </div>
+
+    <!--footer  -->
+
+    <footer class="footer p-10 bg-black text-white text-base-content">
+      <aside class="text-center">
+        <p class="text-3xl font-black">Get In Touch</p>
+        <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+        <p>hockeys@support.com</p>
+        <p>(+62) 123-321-543</p>
+      </aside>
+      <div class="grid grid-cols-2">
+        <nav>
+          <h6 class="footer-title text-lg font-black">Company</h6>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact</a>
+          <a class="link link-hover">Jobs</a>
+          <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title text-lg font-black">Support</h6>
+          <a class="link link-hover">Help Center</a>
+          <a class="link link-hover">FAQ</a>
+          <a class="link link-hover">Ticket Support</a>
+          <a class="link link-hover">Contact Us</a>
+        </nav>
+      </div>
+      <nav class="text-center">
+        <h6 class="footer-title text-lg font-black">Services</h6>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav>
+    </footer>
+  </body>
 </html>
